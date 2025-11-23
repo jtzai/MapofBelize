@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #191970;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+    header a {
+      color: #eeff00;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #000000;
+    }
+        header a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 1000px; /* only for demonstration, should be removed */
+  background: #FF7F7F;
+  padding: 10px;
+  font-size: 50px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 30px;
+}
+
+article {
+  float: left;
+  padding: 10px;
+  width: 70%;
+  text-align: center;
+  background-color: #87CEEB;
+  height: 1000px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4169E1;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+ }
+}
+ button {
+ padding: 10px;
+ font-size: 30px;
+ color: black;
+ background-color: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+	<h2>Map of Belize</h2>
+   <p> <a href="https://jtzai.github.io/html/devteam.html"> - About Me</a> <br>
+</header>
+
+<section>
+	<nav>
+		<ul>
+			<p>Click To See Where Each District is Located in Belize.</p>
+			<button onclick="document.getElementById('myImage').src='corozal.jpg'">Corozal</button> <br>
+			<p>  </p> <br>
+			<button onclick="document.getElementById('myImage').src='orangewalk.jpg'">Orange Walk</button> <br>
+			<p>  </p> <br>
+			<button onclick="document.getElementById('myImage').src='belizeimg.jpg'">Belize</button> <br>
+			<p>  </p> <br>
+			<button onclick="document.getElementById('myImage').src='cayo.jpg'">Cayo</button> <br>
+			<p>  </p> <br>
+			<button onclick="document.getElementById('myImage').src='stancreek.jpg'">Stan Creek</button> <br>
+			<p>  </p> <br>
+			<button onclick="document.getElementById('myImage').src='toledo.jpg'">Toledo</button> <br>
+			<p>  </p> <br>
+			<button onclick="document.getElementById('myImage').src='belize.jpg'">Blank Map</button> <br>
+		</ul>
+	</nav>
+	
+	<article>
+	<h1>Districts</h1>
+		<img id="myImage" src='belize.jpg'style="width:700px">
+	</article>
+</section>
+
+</body>
+</html>
